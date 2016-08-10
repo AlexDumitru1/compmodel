@@ -1,25 +1,16 @@
 function [dy] = NPDistmodified(t,y,c )
+%doesnt consider spleen
 %parameters=[Vp;Vl;Vt;Ql;Qt;Rl;Rt]
-% Vp=c(1); %plasma volume
-% Vl=c(2); %liver vol
-% Vt=c(3); %tumor vol
-% Ql=c(4); %liver flow rate
-% Qt=c(5); %tumor flow rate
-% Rl=c(6); %liver dist. ratio
-% Rt=c(7); %tumor dist. ratio
-% Cl=c(8); %liver np conc.
-% Ct=c(9); %tumor np conc
-
-%first 3 (change) parameters are the ones we are sampling
 Vp=c(1); %plasma volume
-Rl=c(2); %dist. ratio liver
-Vt=c(3); %tumor volume
+Vl=c(2); %liver vol
+Vt=c(3); %tumor vol
 Ql=c(4); %liver flow rate
-Vl=c(5); %liver volume
-Rt=c(6); %dist. ratio tumor 
-Cl=c(7); %NP Conc. liver
-Qt=c(8); %tumor flow rate
-Ct=c(9); %conc. NP tumor 
+Qt=c(5); %tumor flow rate
+Rl=c(6); %liver dist. ratio
+Rt=c(7); %tumor dist. ratio
+%Cl=c(8); %liver np conc.
+%Ct=c(9); %tumor np conc
+
 
 %[liver, tumor, plasma]
 

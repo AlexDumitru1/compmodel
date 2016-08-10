@@ -1,5 +1,8 @@
 function [dy] = NPDist(t,y,c )
 
+%function for NP Distribution that considers spleen
+% c=[Vp;Vl;Vt;Ql;Qt;Rl;Rt]
+
 Vp=c(1);
 Ql=c(2);
 Rl=c(3);

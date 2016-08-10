@@ -42,7 +42,7 @@ ode45(odefun,tspan,y0);
 %plot(t,yplot);
 %'r','b','y','m','c','g','k','-r','ob','-b','ok');
 
-%modify graph 
+%modify plot 
 legend ('dCp/dVp','dCp/dQl','dCp/dRl','dCp/dQt','dCp/dRt','dCl/dVl','dCl/dQl','dCl/dRl','dCt/dVt','dCt/dQt','dCt/dRt');
 title('Sensitivity Analysis; NP Concentration Change with respect to Parameters ');
 ylabel('(d/dt)(dCi/dZi)');

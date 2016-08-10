@@ -4,6 +4,24 @@
 \margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 MCMC Codes-MCMC_BayesParamEst; PostFun;Priorfun;runningfile;sampl_y\
+\f0\fs24 \cf0 MCMC Codes (note: presentation 6, slide 8 in the box.com account has more information about MCMC algorithm)\
 \
-ODE45_NPDistribution-NPDist; NPDistMainModifiedSens; NPDistMainModified; NPDistmodified; NPDistSens }
+1. MCMC_BayesParamEst: Main code the contains MCMC algorithm, note: literature containing information for the lungs is considered as the tumor \
+2. PostFun: calculates posterior probability; input parameters are defined in the comments \
+3. Priorfun: calculates the prior probability \
+4. runningfile: used to run the MCMC code for a set number of samples \
+5. sampl_y: determines the true concentration values using ODE45 function within \'91NPDistmodified\'92\
+\
+\
+\
+NP Distribution (using ODE45):\
+\
+1.NPDistMainModified: Main code used with NPDist or NPDistmodified (the latter doesn\'92t consider the spleen; they both contains the nonlinear flow equations) to plot the NP distribution with time for the compartments (liver, tumor, plasma, spleen)\
+\
+2.NPDistMainModifiedSens- Main code for sensitivity analysis- looks at change in concentration with respect to change in parameters, uses ODE45 to solve \
+\
+3. NPDist: Contains the ODE functions that is used with NPDistMainModified, ode45 used, parameter matrix (c) is shown as comment\
+\
+4.NPDistmodified: Contains the ODE functions that is used with NPDistMainModified, ode45 used, parameter matrix (c) is shown as comment, does NOT consider spleen in model \
+\
+5. NPDistSens: Contains the ODE functions that are used with NPDistMainModifiedSens }
